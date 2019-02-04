@@ -2,24 +2,23 @@
 
 let money = +prompt('Ваш бюджет на месяц?', ''),
 time = prompt("Введите дату в формате YYYY-MM-DD"),
-expenses = prompt("Введите обязательную статью расходов в этом месяце", ''),
-summ = prompt ("Во сколько обойдется?", '');
-
-let expensesData = { //Расходы
-    imperativeExpesesData: expenses + ': ' + summ,
-    ExpesesSumm: summ
-};
+a1 = prompt("Введите обязательную статью расходов в этом месяце", ''),
+a2 = prompt ("Во сколько обойдется?", ''),
+a3 = prompt("Введите обязательную статью расходов в этом месяце", ''),
+a4 = prompt ("Во сколько обойдется?", '');
 
 let appData = { //Бюджет
     moneyData: money,
     timeData: time,
-    imperativeExpesesData: expensesData.imperativeExpesesData, //объект с обязательными расходами
-    optionalData: '',
+    imperativeExpesesData: {}, //объект с обязательными расходами
+    optional: {},
     otherProfitData: [],
     savingsData: false
 };
 
-alert('Бюджет пользователя на 1 день: ' + (Math.round((appData.moneyData-expensesData.ExpesesSumm)/30)) + ' рублей');
+appData.imperativeExpesesData.a1 = a2;
+appData.imperativeExpesesData.a3 = a4;
+alert('Бюджет пользователя на 1 день: ' + (Math.round((appData.moneyData)/30)) + ' рублей'); //Без вычета обязательных расходов
 
 console.log('Бюджет: ', appData.moneyData);
 console.log('Дата: ', appData.timeData);
