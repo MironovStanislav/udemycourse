@@ -1,22 +1,21 @@
 'use strict';
 
-var money = +prompt('Ваш бюджет на месяц?', '');
-var time = prompt("Введите дату в формате YYYY-MM-DD");
+let money = +prompt('Ваш бюджет на месяц?', ''),
+time = prompt("Введите дату в формате YYYY-MM-DD"),
+expenses = prompt("Введите обязательную статью расходов в этом месяце", ''),
+summ = prompt ("Во сколько обойдется?", '');
 
-var expenses = prompt("Введите обязательную статью расходов в этом месяце", '');
-var summ = prompt ("Во сколько обойдется?", '');
-
-var expensesData = {
+let expensesData = { //Расходы
     imperativeExpesesData: expenses + ': ' + summ,
     ExpesesSumm: summ
 };
 
-var appData = {
+let appData = { //Бюджет
     moneyData: money,
     timeData: time,
     imperativeExpesesData: expensesData.imperativeExpesesData, //объект с обязательными расходами
     optionalData: '',
-    otherProfitData:'',
+    otherProfitData: [],
     savingsData: false
 };
 
