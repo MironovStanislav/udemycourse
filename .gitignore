@@ -17,4 +17,4 @@ restore.php
 *.swf
 *.gz 
 *.gz.[0-999]
- 
+.idea/workspace.xml
