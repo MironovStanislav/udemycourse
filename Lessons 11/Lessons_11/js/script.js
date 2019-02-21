@@ -80,7 +80,6 @@ window.addEventListener('DOMContentLoaded', function() {
                 seconds.textContent = '00';
             }
         }
-
     }
 
     setClock('timer', deadline);
@@ -125,7 +124,6 @@ window.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = '';
     });
 
-
 //Form
     let message = {
         loading: 'Загрузка...',
@@ -145,11 +143,9 @@ window.addEventListener('DOMContentLoaded', function() {
        let request = new XMLHttpRequest();
        request.open('POST', 'server.php');
        request.setRequestHeader('Content-Type', 'appllication/x-www-form-urlencoded');
-
        let formData = new FormData(form);
-      // request.send(formData);
-
        let obj = {};
+
        formData.forEach(function (value, key) {
           obj[key] = value;
        });
@@ -180,8 +176,6 @@ window.addEventListener('DOMContentLoaded', function() {
 		statusMessage.style.color = "white";
 		statusMessage.style.paddingTop = "20px";
 
-		
-
     formContacts.addEventListener('submit', function (event) {
 		event.preventDefault();
 		formContacts.appendChild(statusMessage);
@@ -203,8 +197,5 @@ window.addEventListener('DOMContentLoaded', function() {
          }
        });
 	});
-		
-
-
 });
 
